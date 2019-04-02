@@ -129,7 +129,7 @@
 
     <h3><strong>Question 10</strong></h3>
     <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-    <select class="chosen-select" id="question1">
+    <select class="chosen-select" id="question10">
         <option value=""></option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
@@ -182,15 +182,9 @@
             };
             console.log(newFriend);
 
-            $.post("/api/friends", newFriend, function (data) {
-                    console.log(data);
+            $.post("/api/survey", newFriend, function (data) {
+                    console.log("client side render of array ",data);
 
-
-
-                    // $("#reserve-name").val("");
-                    // $("#reserve-phone").val("");
-                    // $("#reserve-email").val("");
-                    // $("#reserve-unique-id").val("");
                 });
         });
 
